@@ -1,0 +1,66 @@
+﻿@model practical1.Models.eventmodel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>eventmodel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.eventcode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eventcode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.typeofevent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.typeofevent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estimatecost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estimatecost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.actualcost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.actualcost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateofevent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateofevent)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

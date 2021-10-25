@@ -1,0 +1,65 @@
+﻿@model IEnumerable<practical1.Models.eventmodel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.eventcode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.typeofevent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estimatecost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.actualcost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateofevent)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.eventcode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.typeofevent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.estimatecost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.actualcost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dateofevent)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.eventcode }) |
+                @Html.ActionLink("Details", "Details", new { id = item.eventcode }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.eventcode })
+            </td>
+        </tr>
+    }
+
+</table>
+
